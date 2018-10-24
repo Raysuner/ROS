@@ -1,0 +1,19 @@
+<launch>
+
+   <include file="$(find yocs_velocity_smoother)/launch/standalone.launch" />
+
+   <include file="$(find amcl)/launch/amcl.launch" />
+
+   <include file="$(find map_server)/launch/map_server.launch" />
+	
+   <include file="$(find ros_arduino_python)/launch/arduino.launch" />	
+
+   <include file="$(find descriptions)/launch/display.launch" />
+   
+   <include file="$(find learning_joystick)/launch/learn_joy.launch" />
+      
+   <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+   
+   <include file="$(find navigation)/launch/move_base.launch" />
+   
+</launch>

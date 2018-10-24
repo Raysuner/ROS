@@ -1,0 +1,10 @@
+<launch>
+  <node pkg="send_goals" type="convert.py" name="simlify_node" >
+  </node>
+ <node pkg="send_goals" type="send_goals" name="send_goal_node" >
+  </node>
+ <node pkg="xfei_asr" type="tts_subscribe_speak" name="speak" respawn="true" >
+  </node>
+ <node pkg="xfei_asr" type="ita_publish_speak" name="listen" respawn="true" >
+  </node>
+</launch>

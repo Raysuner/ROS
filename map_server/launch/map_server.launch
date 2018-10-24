@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="map_server" type="map_server" name="map_server" args="$(find map_server)/maps/new_map.pgm" />
+  <rosparam command="load" file="$(find map_server)/params.yaml" ns="clear_tests"/>
+</launch>  

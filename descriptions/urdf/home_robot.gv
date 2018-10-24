@@ -1,0 +1,23 @@
+digraph G {
+node [shape=box];
+"base_footprint" [label="base_footprint"];
+"base_link" [label="base_link"];
+"A_wheel" [label="A_wheel"];
+"B_wheel" [label="B_wheel"];
+"C_wheel" [label="C_wheel"];
+"D_wheel" [label="D_wheel"];
+"laser" [label="laser"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_footprint" -> "base_footprint_joint" [label="xyz: 0 0 0.07 \nrpy: 0 -0 0"]
+"base_footprint_joint" -> "base_link"
+"base_link" -> "base_Awheel" [label="xyz: 0.14 0.14 -0.015 \nrpy: 1.57075 -0 0"]
+"base_Awheel" -> "A_wheel"
+"base_link" -> "base_Bwheel" [label="xyz: -0.14 0.14 -0.015 \nrpy: 1.57075 -0 0"]
+"base_Bwheel" -> "B_wheel"
+"base_link" -> "base_Cwheel" [label="xyz: -0.14 -0.14 -0.015 \nrpy: 1.57075 -0 0"]
+"base_Cwheel" -> "C_wheel"
+"base_link" -> "base_Dwheel" [label="xyz: 0.14 -0.14 -0.015 \nrpy: 1.57075 -0 0"]
+"base_Dwheel" -> "D_wheel"
+"base_link" -> "base_laser" [label="xyz: 0.15 0 0.065 \nrpy: 0 -0 3.1415"]
+"base_laser" -> "laser"
+}

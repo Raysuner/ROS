@@ -1,0 +1,114 @@
+<?xml version="1.0"?> 
+<robot name="home_robot">
+
+	<material name="yellow">
+		<color rgba="255 255 0 0.9"/>
+	</material>
+	<material name="black">
+		<color rgba="0.2 0.2 0.2 1"/>
+	</material>
+	<material name="white">
+		<color rgba="1 1 1 1"/>
+	</material>	
+	
+	<link name="base_link">
+		<visual>
+			<geometry>
+				<box size="0.355 0.21 0.09"/>
+			</geometry>
+			<material name="yellow"/>
+		</visual>
+	</link>	
+
+	<link name="base_footprint">
+		<visual>
+			<geometry>
+				<box size="0.005 0.005 0.005"/>
+			</geometry>
+			<material name="white"/>
+		</visual>
+	</link>
+	<joint name="base_footprint_joint" type="fixed">
+		<origin xyz="0 0 0.07"/>
+		<parent link="base_footprint"/>
+		<child link="base_link"/>
+	</joint>
+
+	<link name="laser">
+		<visual>
+			<geometry>
+				<cylinder length="0.04" radius="0.0375"/>
+			</geometry>
+			<origin rpy="0 0 0"/>
+			<material name="black"/>
+		</visual>
+	</link>	
+	<joint name="base_laser" type="continuous">
+		<origin rpy="0 0 3.1415" xyz="0.15 0 0.065"/>
+		<parent link="base_link"/>
+		<child link="laser"/>
+		<axis xyz="0 0 1"/>
+	</joint>	
+
+	<link name="A_wheel">
+		<visual>
+			<geometry>
+				<cylinder length="0.04" radius="0.05"/>
+			</geometry>
+			<material name="black"/>
+		</visual>
+	</link>
+	<joint name="base_Awheel" type="continuous">
+		<origin rpy="1.57075 0 0" xyz="0.14 0.14 -0.015"/>
+		<parent link="base_link"/>
+		<child link="A_wheel"/>
+		<axis xyz="0 0 1"/>
+	</joint>	
+	
+
+	<link name="B_wheel">
+		<visual>
+			<geometry>
+				<cylinder length="0.04" radius="0.05"/>
+			</geometry>
+			<material name="black"/>
+		</visual>
+	</link>
+	<joint name="base_Bwheel" type="continuous">
+		<origin rpy="1.57075 0 0" xyz="-0.14 0.14 -0.015"/>
+		<parent link="base_link"/>
+		<child link="B_wheel"/>
+		<axis xyz="0 0 1"/>
+	</joint>	
+
+	<link name="C_wheel">
+		<visual>
+			<geometry>
+				<cylinder length="0.04" radius="0.05"/>
+			</geometry>
+			<material name="black"/>
+		</visual>
+	</link>
+	<joint name="base_Cwheel" type="continuous">
+		<origin rpy="1.57075 0 0" xyz="-0.14 -0.14 -0.015"/>
+		<parent link="base_link"/>
+		<child link="C_wheel"/>
+		<axis xyz="0 0 1"/>
+	</joint>	
+
+
+	<link name="D_wheel">
+		<visual>
+			<geometry>
+				<cylinder length="0.04" radius="0.05"/>
+			</geometry>
+			<material name="black"/>
+		</visual>
+	</link>
+	<joint name="base_Dwheel" type="continuous">
+		<origin rpy="1.57075 0 0" xyz="0.14 -0.14 -0.015"/>
+		<parent link="base_link"/>
+		<child link="D_wheel"/>
+		<axis xyz="0 0 1"/>
+	</joint>	
+</robot>	

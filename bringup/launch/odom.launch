@@ -1,0 +1,13 @@
+<launch>
+
+   <include file="$(find ros_arduino_python)/launch/arduino.launch" />	
+
+   <include file="$(find descriptions)/launch/display.launch" />
+   
+   <include file="$(find learning_joystick)/launch/learn_joy.launch" />
+      
+   <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+   
+   <include file="$(find gmapping)/launch/slam_gmapping.launch" />
+   
+</launch>

@@ -1,0 +1,19 @@
+<launch>
+
+   <node pkg="tf" type="static_transform_publisher" name="odom_combined_broadcaster" args="0 0 0 0 0 0 /odom /odom_combined 100" />
+   
+   <include file="$(find descriptions)/launch/display.launch" />
+   
+   <include file="$(find ros_arduino_python)/launch/arduino.launch" />	
+   
+   <include file="$(find razor_imu_9dof)/launch/imu.launch" />
+   
+   <include file="$(find learning_joystick)/launch/learn_joy.launch" />
+   
+   <include file="$(find robot_pose_ekf)/launch/robot_pose_ekf.launch" />
+   
+   <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+   
+   <include file="$(find gmapping)/launch/slam_gmapping.launch" />
+   
+</launch>

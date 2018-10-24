@@ -1,0 +1,5 @@
+<launch>
+	<include file="$(find yocs_velocity_smoother)/launch/standalone.launch" />
+	<include file="$(find ros_arduino_python)/launch/arduino.launch" />
+	<include file="$(find learning_joystick)/launch/learn_joy.launch" />
+</launch>	

@@ -1,0 +1,8 @@
+<launch>
+  <node pkg="send_goals" type="convert.py" name="simlify_node" >
+  </node>
+ <node pkg="send_goals" type="send_goals" name="send_goal_node" >
+  </node>
+ <include file="$(find baidu_speech)/launch/simple_voice.launch"/>
+ <include file="$(find baidu_speech)/launch/simple_speaker.launch"/>
+</launch>

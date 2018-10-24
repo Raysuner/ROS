@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg = "xf_asr" type = "tts_sample_node" name = "tts_sample_node" />
+  
+  <node pkg = "xf_asr" type = "tuling_node" name = "tuling_node" />
+  
+  <node pkg = "xf_asr" type = "asr_sample_node" name = "asr_sample_node" />
+</launch>  
